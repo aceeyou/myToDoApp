@@ -1,0 +1,390 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 165px;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+
+header #head {
+    display: flex;
+    justify-content: space-between;
+}
+
+header #head h1 {
+    font-size: 23px;
+    margin-left: 30px;
+}
+
+header #head #user{
+    margin-right: 30px;
+}
+
+header #head #user img {
+    height: 25px;
+}
+
+header #input_todo {
+    display: flex;
+    position: relative;
+    margin: 25px 0;
+    height: 50px;
+    padding: 5px;
+    justify-content: center;
+}
+
+header #input_todo input {
+    width: 80%;
+    border: 1.5px solid black;
+    border-right: none;
+    border-radius: 20px;
+    outline: none;
+    padding-right: 50px;
+    text-indent: 22px;
+    font-weight: 500;
+}
+
+header #input_todo button {
+    position: absolute;
+    right: 11%;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+header #input_todo button img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+main {
+    margin-bottom: 150px;
+}
+
+main .tasks {
+    padding: 0 25px;
+    margin-bottom: 50px;
+}
+
+main .tasks #top_tasks{
+    visibility: hidden;
+    display: flex;
+}
+
+main .tasks #top_tasks h2 {
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+main .tasks #todoCount {
+    visibility: hidden;
+    margin-top: 3px;
+    width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(243, 85, 45);
+    line-height: 15px;
+    text-align: center;
+    background-color: rgb(236, 240, 240);
+}
+
+main #tasks {
+    list-style: none;
+}
+
+main #tasks .item {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 15px;
+    line-height: 44px;
+    background-color: rgba(243, 202, 149, 0.925);
+}
+
+main #tasks .buttons {
+    order: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 12px;
+    width: 60px;
+}
+
+main #tasks .buttons button {
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main #tasks .item .buttons .done img {
+    width: 22px;
+    height: 22px;
+}
+
+main #tasks .item .buttons .remove img {
+    width: 22px;
+    height: 22px;
+}
+
+main #tasks .item span{
+    order: 2;
+    font-weight: 500;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 13px;
+}
+
+main .completed {
+    padding: 0 25px;
+    list-style: none;
+}
+
+main .completed #top_completed{
+    visibility: hidden;
+    display: flex;
+}
+
+main .completed #top_completed h2 {
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+main .completed #completeCount {
+    visibility: hidden;
+    margin-top: 3px;
+    width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(243, 85, 45);
+    line-height: 15px;
+    text-align: center;
+    background-color: rgb(236, 240, 240);
+}
+
+main #completed li {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 15px;
+    line-height: 44px;
+    background-color: rgba(243, 202, 149, 0.925);
+    opacity: 0.8;
+}
+
+main #completed .buttons {
+    order: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10px;
+    width: 60px;
+    cursor: pointer;
+}
+
+main #completed .buttons button {
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+}
+
+main #completed .item .buttons .done img {
+    width: 22px;
+    height: 22px;
+}
+
+main #completed .item .buttons .remove img {
+    width: 22px;
+    height: 22px;
+}
+
+main #completed .item span {
+    order: 2;
+    font-weight: 500;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 13px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 50px;
+    width: 100%;
+    background-color:rgba(243, 202, 149, 0.925) ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+nav div {
+    margin-top: 8px;
+    height: 33px;
+    border-radius: 5px;
+}
+
+nav div button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav div button img{
+    width: 33px;
+    height: 33px;
+    padding: 5px;
+}
+
+nav .active {
+    background-color: rgb(228, 156, 123);
+}
+
+#see_todo {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: 200ms ease-in;
+    z-index: 8;
+}
+
+#see_todo span {
+    justify-content: center;
+    min-height: 60px;
+    min-width: 50%;
+    padding: 12px 17px;
+    background-color: rgba(243, 202, 149, 0.925);
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#see_todo button {
+    position: absolute;
+    bottom: 150px;
+    right: 45%;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#see_todo button img {
+    transform: rotate(-90deg);
+    width: 35px;
+    height: 35px;
+}
+
+
+@media only screen and (min-width: 600px){
+
+    header #head {
+        display:flex;
+        justify-content: space-around;
+        padding: 0 0;
+    }
+
+    header #input_todo input {
+        width: 30%;
+    }
+
+    header #input_todo #add_todo {
+        right: 35%;
+    }
+
+
+    main {
+        display: flex;
+    }
+
+    .tasks{
+        margin: 30px 0 0 13%;
+        width: 40%;
+    }
+
+    .tasks #tasks .item {
+        max-width: 500px;
+    }
+
+    .tasks #tasks .item span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 13px;
+    }
+
+    .completed{
+        margin: 30px 0 0 0;
+        width: 40%;
+    }
+
+    .completed #completed .item {
+        max-width: 500px;
+    }
+
+    .completed #completed .item span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 13px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 35%;
+        bottom: 60px;
+        width: 30%;
+        border-bottom: 0px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 4px black;
+        background: white;
+    }
+
+    nav .nav-btn{
+        margin: 0 10%;
+    }
+
+    #see_todo button {
+        right: 49%;
+    }
+
+}
